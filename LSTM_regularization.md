@@ -65,7 +65,9 @@ Here we clearly see some messed up behaviour from the LSTM100, so embedding drop
 
 2) One also recognizes that LSTM100 has a trend to overfit again. 
 
-All in all lets forget about embedding dropout. Lets just look at how the training curves look like just as a way to emphasize the overfitting tendency of LSTM100. 
+All in all lets forget about embedding dropout. The whole point of introducing dropout is to reduce overfitting, instead LSTM100 didnt really correct that but just introduced some weird jitteriness that is actually making things worse.
+
+Lets just look at how the training curves look like just as a way to emphasize the overfitting tendency of LSTM100. 
 
 ## training + test comparison LSTM100 vs LSTM011 
 
