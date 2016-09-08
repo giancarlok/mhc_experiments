@@ -41,7 +41,11 @@ We now coin LSTM011 the previous LSTM11 and LSTM111 to be the previous LSTM11 bu
 
 ## test comparison LSTM111 vs LSTM111+FFN 
 
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_LSTM111_vs_LSTM111FFN%20.png)
+
 ## training + test comparison LSTM111 vs LSTM111+FFN
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/train%2Btest_LSTM111_vs_LSTM111FFN%20.png)
 
 ## Conclusion so far
 
@@ -54,6 +58,14 @@ The next section I will just test LSTM100 against LSTM011 to see what the embedd
 ## test comparison LSTM100 vs LSTM001
 
 ![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_LSTM100_vs_LSTM011.png)
+
+Here we clearly see some messed up behaviour from the LSTM100, so embedding dropout doesnt seem to be a good idea. 
+
+1) It looks like here and there important bits of information are being thrown out, thus making the performance very shaking, unstable and the curve very non-smooth.  
+
+2) One also recognizes that LSTM100 has a trend to overfit again. 
+
+All in all lets forget about embedding dropout. Lets just look at how the training curves look like just as a way to emphasize the overfitting tendency of LSTM100. 
 
 ## training + test comparison LSTM100 vs LSTM011 
 
