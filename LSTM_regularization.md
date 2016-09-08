@@ -6,7 +6,7 @@ Based on the analysis comparing test and training performances between a classic
 * dropout (with probability 0.5) on recurrent connections "LSTM01", and
 * both "LSTM11". 
 
-# Plot
+# Plots
 ## test set (40 epochs)
 
 ![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/Screen%20Shot%202016-09-07%20at%2016.02.58.png)
