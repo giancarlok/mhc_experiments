@@ -38,3 +38,23 @@ We now coin LSTM011 the previous LSTM11 and LSTM111 to be the previous LSTM11 bu
 ## training and test set comparison (85 epochs)
 
 ![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/Screen%20Shot%202016-09-08%20at%2013.38.27.png)
+
+## test comparison LSTM111 vs LSTM111+FFN 
+
+## training + test comparison LSTM111 vs LSTM111+FFN
+
+## Conclusion so far
+
+Due to the steady behaviour of LSTM111 it seemed to me that it is the right moment to introduce so more model complexity. The most natural way to do this is either add a Dense(10) layer, or LSTM layer or maybe even increase the hidden layer size of the current LSTM. I chose to go with Dense(10) layer. 
+
+Quite surprisingly, the behaviour didn't really improve which makes me wonder why. One potential reason could be that one has to widen the model (aka adding complexity) before "throwing out" information (aka "skinny jeans analogy"). Here we added complexity after doing all the dropout (aka after "throwing out" some information). So probably it is a good idea to introduce somethign before out LSTM model and maybe get rid of the embedding dropout as this one is usually pretty aggressive.
+
+The next section I will just test LSTM100 against LSTM011 to see what the embedding dropout alone is actually doing, before adding more complexity. I will then get a better understanding which of both regularization approaches are better / stronger, and whether to keep going with LSTM1xxx or rather LSTM0xxxx.
+
+## test comparison LSTM100 vs LSTM001
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_LSTM100_vs_LSTM011.png)
+
+## training + test comparison LSTM100 vs LSTM011 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training%2Btest_LSTM100_vs_LSTM011.png)
