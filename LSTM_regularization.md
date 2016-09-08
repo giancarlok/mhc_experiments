@@ -72,3 +72,14 @@ Lets just look at how the training curves look like just as a way to emphasize t
 ## training + test comparison LSTM100 vs LSTM011 
 
 ![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training%2Btest_LSTM100_vs_LSTM011.png)
+
+# Adding 'start' and 'stop' symbols
+
+## test plot
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_lstm011ss_vs_lstm011.png)
+
+## training and test plot
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training%2Btest_lstm011ss_vs_lstm011.png)
+
