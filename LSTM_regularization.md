@@ -83,3 +83,4 @@ Lets just look at how the training curves look like just as a way to emphasize t
 
 ![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training%2Btest_lstm011ss_vs_lstm011.png)
 
+OK looks like the initial activations are good enough to represent sequence boundaries. So no need for start and stop symbols. 
