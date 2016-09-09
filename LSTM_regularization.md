@@ -104,9 +104,9 @@ All in all it looks like LSTM is really not performing that well (at least not a
 Despit the richer input, the LSTM is still performaning worse than a classical feed-forward net. So this let me conclude that the LSTM doesn't handle the surplus in information it has been given, very effectively. Call X the thing in the LSTM that causes the model to not handle the surplus in information effectively.
 
 So question is, can we have Y without being forced to have X at the same time? The following setps could look like this:
-a) filter out what X could be or come up with strategies that pinpoints what X is. 
-b) try to understand the minimal strucutre needed to have Y working. (call this minimal structure M)
-c) try to remove X while still having Y. 
-c') try on general model M how it performs and understand why it doesnt imply X automatically.
-d') find a way to bypass a way to improve performance of M while staying away form X as much as possible. 
+* a) filter out what X could be or come up with strategies that pinpoints what X is. 
+* b) try to understand the minimal strucutre needed to have Y working. (call this minimal structure M)
+* c) try to remove X while still having Y. 
+* c') try on general model M how it performs and understand why it doesnt imply X automatically.
+* d') find a way to bypass a way to improve performance of M while staying away form X as much as possible. 
 
