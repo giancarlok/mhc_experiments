@@ -184,4 +184,12 @@ Not much of a difference.
 
 Not much of a difference either, we just observe 100 hidden units overfitting slightly more
 
-## training & test 
+# LSTM with BatchNormalization vs without
+
+## test
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_LSTM_vs_LSTMBatch.png)
+
+## training & test
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_LSTM_vs_LSTMBatch.png)
