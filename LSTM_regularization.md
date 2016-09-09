@@ -130,4 +130,14 @@ here we compare LSTM011 with GRU011, same parameters for both, so we have a one 
 
 We see that GRU is a lot more jittery and unstable in performance. The training performance of GRU is less than the one of the LSTM, so GRU overfits little bit less than LSTM.
 
-## training + test set
+# SimpleRNN vs LSTM
+
+## test set comparison 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_RNN_vs_LSTM.png)
+
+## training + test set comparison
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_RNN_vs_LSTM.png)
+
+One sees that RNN clearly performs worse than LSTM
