@@ -140,4 +140,48 @@ We see that GRU is a lot more jittery and unstable in performance. The training 
 
 ![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_RNN_vs_LSTM.png)
 
-One sees that RNN clearly performs worse than LSTM
+## Conclusion & What's next
+
+One sees that RNN clearly performs worse than LSTM. So none of SimpleRNN nor GRU performs better than their LSTM counterparts, so let us maybe come back to our LSTM and think more deeply about what parameters one can tweak. Let us think for a second which other parameters the LSTM might be particularly sensitive to, before moving on the bigger picture. Here a few candidtates:
+* optimization procedure (Since LSTMs are particularly sensitive to step size, we will be comparing ADAM vs RMSProp)
+* embedding dimension (we have seen that applying dropout to embedding layer had quite a significant effect on the performance curve, so let us compare “big” vs. “small” sizes for embedding dimension)
+* Batch Normalization
+* hidden size (we already gridsearched this parameter and foudn 50, but we will do this just to see the plots and the behaviour over several epochs to get an idea how hidden size impacts performance and whether there is a lot of leverage this parameter, we will compare sizes 25 vs 50 vs 100 on a single plot.)
+
+# LSTM "ADAM" vs "RMSProp"
+
+## test 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_RMSProp_vs_Adam.png)
+
+## training & test 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_RMSProp_vs_Adam.png)
+
+As we see there is not much of a difference
+
+# LSTM embedding dimension 32 vs 128
+
+## test 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_128_vs_32.png)
+
+## training & test
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_128_vs_32.png)
+
+Not much of a difference.
+
+# LSTM hidden sizes 25 vs 50 vs 100
+
+## test 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_LSTM_25_50_100.png)
+
+## training & test
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_LSTM_25_50_100.png)
+
+Not much of a difference either, we just observe 100 hidden units overfitting slightly more
+
+## training & test 
