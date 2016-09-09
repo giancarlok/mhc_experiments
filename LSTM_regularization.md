@@ -110,3 +110,24 @@ So question is, can we have Y without being forced to have X at the same time? T
 * c') try on general model M how it performs and understand why it doesnt imply X automatically.
 * d') find a way to bypass a way to improve performance of M while staying away form X as much as possible. 
 
+After reading a bit about LSTMs, here: 
+
+http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+I got the impression I should try several variations of LSTMs, such as GRU or just simply compare it with a simple RNN with same parameters, and see if there is significant difference, that might potentially hint us closer towards X.
+
+# GRU vs LSTM 
+
+here we compare LSTM011 with GRU011, same parameters for both, so we have a one to one comparison.
+
+## test set
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_LSTM011_vs_GRU011.png)
+
+## training and test set 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_LSTM011_vs_GRU011.png)
+
+We see that GRU is a lot more jittery and unstable in performance. The training performance of GRU is less than the one of the LSTM, so GRU overfits little bit less than LSTM.
+
+## training + test set
