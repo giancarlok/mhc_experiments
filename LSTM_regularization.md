@@ -84,3 +84,29 @@ Lets just look at how the training curves look like just as a way to emphasize t
 ![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training%2Btest_lstm011ss_vs_lstm011.png)
 
 OK looks like the initial activations are good enough to represent sequence boundaries. So no need for start and stop symbols. 
+
+# Stacking two LSTM layers
+
+let us compare LSTM011 with LSTM011-11 which is LSTM011 followed by same LSTM with 50 hidden units, `dropout_W =0.5` and  `dropout_U=0.5`. We want to see whether the reduction of variance in increase of bias we have got through adding dropout allows us to augment our model with more complexity and get higher performance. So one way of doing this is by adding another LSTM layer.
+
+## test set comparison 
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_LSTM011-11_vs_LSTM011%20.png)
+
+## training + test set comparison  
+
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training%2Btest_LSTM011-11_vs_LSTM011%20.png)
+
+## Conclusion
+
+All in all it looks like LSTM is really not performing that well (at least not as we expected given the fact that it read sequences of multiple length without the need of a helper method that destroys the sequence and thus loses information). Call Y the thing in the LSTM that enables it to capture sequences of varying length.
+
+Despit the richer input, the LSTM is still performaning worse than a classical feed-forward net. So this let me conclude that the LSTM doesn't handle the surplus in information it has been given, very effectively. Call X the thing in the LSTM that causes the model to not handle the surplus in information effectively.
+
+So question is, can we have Y without being forced to have X at the same time? The following setps could look like this:
+a) filter out what X could be or come up with strategies that pinpoints what X is. 
+b) try to understand the minimal strucutre needed to have Y working. (call this minimal structure M)
+c) try to remove X while still having Y. 
+c') try on general model M how it performs and understand why it doesnt imply X automatically.
+d') find a way to bypass a way to improve performance of M while staying away form X as much as possible. 
+
