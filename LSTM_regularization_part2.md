@@ -23,14 +23,13 @@ Lets dive into it.
 
 ## A1) Masking zeros vs padding in the embedding layer 
 
-![notebook](https://github.com/giancarlok/mhc_experiments/blob/master/LSTM%20mask%20zeros%20vs%20explicit%20padding.ipynb)
-
+![ notebook ](https://github.com/giancarlok/mhc_experiments/blob/master/LSTM%20mask%20zeros%20vs%20explicit%20padding.ipynb)
 
 Here we compare our basic bi-LSTM model by looking at `mask_zero = True` vs `mask_zero = False`
 
 ### test set 
 
-
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_mask_zero_vs_padding.png)
 
 ### test and training set
 
