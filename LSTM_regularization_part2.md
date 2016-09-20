@@ -33,6 +33,8 @@ Here we compare our basic bi-LSTM model by looking at `mask_zero = True` vs `mas
 
 ### test and training set
 
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_est_mask_zero_vs_padding.png)
+
 ### Conclusion 
 
 ## A2) embedding vs bi-embedding for bidirectional LSTM
