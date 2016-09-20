@@ -42,11 +42,13 @@ We see that padding confuses the LSTM initially (which we read from the performa
 Recall the fact that we are actually working with a bidirectional LSTM. So far our bi-LSTM has had both its LSTMs coming from the same embedding layer. Now we will try to decouple the embedding for each LSTM, so that each LSTM has its own embedding layer and we' ll see whether there is a gain in performance by doing that. Pro forma we compare these two scenrios with a simple LSTM just as a baseline. 
 
 ### test set comparison
-
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/test_embedding_vs_biembedding%20.png)
 
 
 ### test and training set comparison
+![](https://raw.githubusercontent.com/giancarlok/mhc_experiments/master/training_test_embedding_vs_biembedding.png)
 
+### Conclusion 
 
 
 ## A3) Representing embedding vectors via PCA and t-SNE
