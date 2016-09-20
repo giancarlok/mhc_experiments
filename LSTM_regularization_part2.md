@@ -13,7 +13,9 @@ B) Another more fundamental question is how is LSTM performing wrt FFNN and sigm
 
 C) In hope of exposing X, we will give some toy dataset to the LSTM constructed upon the current dataset, and see whether there are some inefficiencies being exposed. One could feed the LSTM with some more or less obvious patterns to learn and see if it indeed gets 100% accuracy. 
 
-D) Another parameter that we will explore is the learning rate, for some reason we have completely overlooked this parameter, and it appears to be the most important paramater for LSTMs. 
+D) A little side idea that came up (and maybe somehow related to C) is to approximate peptides with their first 3 amino acids and last three amino acids, and see how well LSTM and FFN are performing. This might give us an idea how relevant the middle piece really is, and whether more data is actually confusing the model rather than helping them. The idea comes from the fact that binding affinities tend to be rather influenced by what happens towards to ends of the peptide.
+
+E) Another parameter that we will explore is the learning rate, for some reason we have completely overlooked this parameter, and it appears to be the most important paramater for LSTMs. 
 
 Lets dive into it. 
 
@@ -29,4 +31,6 @@ Lets dive into it.
 
 # C) Toy datasets
 
-# D) Learning rate analysis 
+# D) Approximation of peptides 
+
+# E) Learning rate analysis 
