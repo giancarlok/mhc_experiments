@@ -50,6 +50,7 @@ Recall the fact that we are actually working with a bidirectional LSTM. So far o
 
 ### Conclusion 
 
+As we can see there is not much of a difference between one single embedding and two different embeddings. So it seems that both LSTMs learn the same embedding vectors.
 
 ## A3) Representing embedding vectors via PCA and t-SNE
 
