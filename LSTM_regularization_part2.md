@@ -73,7 +73,36 @@ As we can see there is not much of a difference between one single embedding and
 
 # B) All vs 9 mer vs non- 9 mer analysis
 
+Here we compare LSTM, FFNN, a simple sigmoid layer, and a linear model on all mers, 9 mers and non- 9 mers. The plots that will follow are probably the most interesting plots shown so far, as they really highlight how different models learn from the same dataset, and that very simple models learn surprisingly well, even better than LSTMs.
+
+## Performance on "all mers"
+
+
+### test set comparison on all mers
+
+### test and training set comparison on all mers
+
+
+## Performance on "9 mers"
+
+
+### test set comparison on 9 mers
+
+### test and training set comparison on 9 mers
+
+
+## Performance on "non- 9 mers"
+
+
+### test set comparison on "non - 9 mers"
+
+### test and training set comparison on "non - 9 mers"
+
+
+
 # C) Toy datasets
+
+
 
 # D) Approximation of peptides 
 
