@@ -52,7 +52,7 @@ Recall the fact that we are actually working with a bidirectional LSTM. So far o
 
 As we can see there is not much of a difference between one single embedding and two different embeddings. So it seems that both LSTMs learn the same embedding vectors.
 
-## A3) Representing embedding vectors via PCA and t-SNE (![](https://github.com/giancarlok/mhc_experiments/blob/master/Embedding%20Representation-%20FFN%20vs%20LSTM.ipynb))
+## A3) Representing embedding vectors via PCA and t-SNE ([](https://github.com/giancarlok/mhc_experiments/blob/master/Embedding%20Representation-%20FFN%20vs%20LSTM.ipynb))
 
 
 ### PCA on the embedded vectors for LSTM
