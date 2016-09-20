@@ -1,9 +1,9 @@
 # Introduction
 
-Regularizations attempts in part 1 have been successfull in the sense that we coudl prevent the model from overfitting by tuning dropout and various other parameters. 
+Regularizations attempts in part 1 have been successfull in the sense that we could prevent the model from overfitting by tuning dropout and various other parameters. 
 However we still dont have our LSTM at the performance we were hoping for, so the hyperparamater chasing continues.
 
-A) So in what follows I tried some more random ideas son the embedding side as it appears that it has great effect on the performance curve due to adding embedding dropout highly impacted the behaviour of the AUC performance curve. So two things we are going to try is:
+A) So in what follows I tried some more random ideas son the embedding layer as it appears to have great effect on the performance curve: adding embedding dropout highly impacted the behaviour of the AUC performance curve, it became really jittery. So two things we are going to try:
 * masking zeros vs padding 
 * compare bidirectional LSTM with both LSTMs having the same embedding vs bidirectional LSTM with both LSTMs having individual embeddings (vs a simple LSTM)
 * look at the embedded vectors and see what it looks like after PCA-ing or TSNE-ing them, maybe there is an interesting relationship to spot, or maybe there is anomly in the sense that some amino acids are far away form each other when they shoudln't. 
@@ -21,7 +21,16 @@ Lets dive into it.
 
 # A) Embedding analysis
 
-## A1) Masking zeros vs padding in the embedding layer
+## A1) Masking zeros vs padding in the embedding layer 
+Here we compare our basic bi-LSTM model by looking at `mask_zero = True` vs `mask_zero = False`
+
+### test set 
+
+
+
+### test and training set
+
+### Conclusion 
 
 ## A2) embedding vs bi-embedding for bidirectional LSTM
 
