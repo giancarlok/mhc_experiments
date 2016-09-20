@@ -37,7 +37,21 @@ Here we compare our basic bi-LSTM model by looking at `mask_zero = True` vs `mas
 
 ### Conclusion 
 
+We see that padding confuses the LSTM initially (which we read from the performance drop), but eventually LSTM understands that zeros are to be ignored and performs eventually the same as when masking zeros. So there is no real gain by keeping the zeros.
+
 ## A2) embedding vs bi-embedding for bidirectional LSTM
+
+![](https://github.com/giancarlok/mhc_experiments/blob/master/LSTM%20vs%20biLSTM%20vs%20bi_embedded_LSTM.ipynb)
+
+Recall the fact that we are actually working with a bidirectional LSTM. So far our bi-LSTM has had both its LSTMs coming from the same embedding layer. Now we will try to decouple the embedding for each LSTM, so that each LSTM has its own embedding layer and we' ll see whether there is a gain in performance by doing that. Pro forma we compare these two scenrios with a simple LSTM just as a baseline. 
+
+### test set comparison
+
+
+
+### test and training set comparison
+
+
 
 ## A3) Representing embedding vectors via PCA and t-SNE
 
