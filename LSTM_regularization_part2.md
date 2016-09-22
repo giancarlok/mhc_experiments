@@ -1,6 +1,6 @@
 # Introduction
 
-Regularizations attempts in part 1 have been successfull in the sense that we could prevent the model from overfitting by tuning dropout and various other parameters. 
+Regularizations attempts in [part 1](https://github.com/giancarlok/mhc_experiments/blob/master/LSTM_regularization_part1.md) have been successfull in the sense that we could prevent the model from overfitting by tuning dropout and various other parameters. 
 However we still dont have our LSTM at the performance we were hoping for, so the hyperparamater chasing continues.
 
 A) So in what follows I tried some more random ideas son the embedding layer as it appears to have great effect on the performance curve: adding embedding dropout highly impacted the behaviour of the AUC performance curve, it became really jittery. So two things we are going to try:
